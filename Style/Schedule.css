@@ -19,7 +19,7 @@
     justify-content: center;
 }
 
-/* Race Card Styling */
+
 .race-card {
     background: linear-gradient(145deg, #0f1738, #0a0f25);
     border: 2px solid #3b82f6; /* Cyan border */
@@ -30,21 +30,21 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-    /* Setup for the entrance animation */
+
     opacity: 0;
     transform: translateY(40px);
     animation: slideUp 0.6s forwards ease-out;
 }
 
-/* Hover Effect: Cards pop up and glow purple */
+
 .race-card:hover {
-    transform: translateY(-10px) scale(1.02); /* Overrides animation transform on hover */
+    transform: translateY(-10px) scale(1.02);
     border-color: #7c3aed;
     box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
 }
 
 .race-date {
-    color: #eab308; /* Gold */
+    color: #eab308;
     font-weight: bold;
     font-size: 18px;
     letter-spacing: 2px;
@@ -85,7 +85,7 @@
     color: white;
 }
 
-/* Animation Keyframes for sliding up */
+
 @keyframes slideUp {
     to {
         opacity: 1;

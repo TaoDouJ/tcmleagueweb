@@ -1,6 +1,4 @@
-/* =========================================
-   TEAMS PAGE & MODAL STYLES
-   ========================================= */
+
 .teams-wrapper {
     max-width: 900px;
     margin: 40px auto;
@@ -18,28 +16,27 @@
     gap: 15px;
 }
 
-/* Individual Team Row */
 .team-list-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(90deg, #0f1738, #152259);
     padding: 15px 25px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 
-    /* Animation setup */
+
     opacity: 0;
     transform: translateX(-30px);
     animation: slideIn 0.5s forwards ease-out;
 }
 
 .team-list-row:hover {
-    border-color: #3b82f6; /* Cyan border on hover */
-    transform: scale(1.02) translateX(0); /* Slight pop out */
+    border-color: #3b82f6;
+    transform: scale(1.02) translateX(0);
     box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
 }
 
@@ -54,7 +51,7 @@
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #eab308; /* Gold border */
+    border: 2px solid #eab308;
     box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
 }
 
@@ -74,7 +71,7 @@
 }
 
 .team-drivers-count {
-    background-color: #7c3aed; /* Purple */
+    background-color: #7c3aed;
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -83,14 +80,14 @@
     box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
 }
 
-/* Modal (Popup) Styles */
+
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(4, 9, 26, 0.85); /* Dark semi-transparent background */
+    background: rgba(4, 9, 26, 0.85);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
@@ -103,7 +100,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Class added by JS to show the modal */
+
 .modal-overlay.active {
     opacity: 1;
     visibility: visible;
@@ -120,13 +117,13 @@
     text-align: center;
     box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
 
-    /* Bouncy pop-in animation */
+
     transform: scale(0.7);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .modal-overlay.active .modal-content {
-    transform: scale(1); /* Pops to full size */
+    transform: scale(1);
 }
 
 .close-btn {
@@ -142,7 +139,7 @@
 }
 
 .close-btn:hover {
-    color: #ea580c; /* Orange */
+    color: #ea580c;
 }
 
 .modal-header {
@@ -197,7 +194,7 @@
     color: #ffffff;
     border-left: 3px solid #ea580c;
 }
-/* This makes the teams actually appear! */
+
 @keyframes slideIn {
     from {
         opacity: 0;

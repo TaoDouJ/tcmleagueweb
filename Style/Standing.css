@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +10,10 @@ body {
     background-color: #080f26;
     color: #ffffff;
     line-height: 1.6;
-    /* Optional: Add a subtle background pattern or gradient to mimic the image */
     background-image: radial-gradient(circle at top, #152259, #080f26 70%);
     min-height: 100vh;
 }
 
-/* Navigation Bar (From Main Page) */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,7 +54,7 @@ body {
     color: #3b82f6;
 }
 
-/* Main Page Elements */
+
 .banner-container { width: 100%; max-height: 400px; overflow: hidden; background-color: #080f26; }
 .banner-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 section, header { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
@@ -71,9 +69,7 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
 .yt-btn { background-color: #ea580c; color: white; }
 .yt-btn:hover { background-color: #c2410c; box-shadow: 0 0 10px rgba(234, 88, 12, 0.6); }
 
-/* =========================================
-   STANDINGS PAGE STYLES
-   ========================================= */
+
 .standings-wrapper {
     max-width: 900px;
     margin: 40px auto;
@@ -86,7 +82,7 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
 }
 
 .grand-race {
-    color: #eab308; /* Gold */
+    color: #eab308;
     font-size: 24px;
     letter-spacing: 2px;
     margin-bottom: -10px;
@@ -95,7 +91,7 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
 
 .standings-main-title {
     color: transparent;
-    -webkit-text-stroke: 1px #eab308; /* Gold outline */
+    -webkit-text-stroke: 1px #eab308;
     background: linear-gradient(180deg, #6d28d9, #4c1d95);
     -webkit-background-clip: text;
     font-size: 64px;
@@ -112,7 +108,6 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-/* CSS Grid to perfectly align columns */
 .table-header, .team-row {
     display: grid;
     grid-template-columns: 50px 1fr 60px 50px 50px 50px 70px;
@@ -134,14 +129,13 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
     text-align: center;
 }
 
-/* Row Styling */
 .team-row {
-    opacity: 0; /* Start hidden for animation */
+    opacity: 0;
     transform: translateX(-30px);
     animation: slideIn 0.5s forwards ease-out;
 }
 
-/* Pill Shapes */
+
 .pill {
     padding: 8px 0;
     border-radius: 50px;
@@ -150,20 +144,20 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
 }
 
 .pill-no {
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6); /* Blue to Purple */
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     color: white;
 }
 
 .pill-team {
     background-color: #ffffff;
-    color: #7c3aed; /* Purple text */
+    color: #7c3aed;
     text-transform: uppercase;
     font-style: italic;
     letter-spacing: 1px;
 }
 
 .pill-pts {
-    background-color: #3b82f6; /* Cyan Blue */
+    background-color: #3b82f6;
     color: white;
 }
 
@@ -172,7 +166,7 @@ h2 { font-size: 32px; margin-bottom: 15px; color: #3b82f6; text-transform: upper
     color: #7c3aed;
 }
 
-/* Animation Keyframes */
+
 @keyframes slideIn {
     to {
         opacity: 1;

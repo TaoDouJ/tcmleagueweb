@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Here is your team data. Update these numbers every week!
-    // The table will automatically render them in order.
+
     const teamsData = [
         { name: "SUPERNOVA", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
         { name: "HELLO KITTY RACING", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
@@ -20,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const board = document.getElementById('standings-board');
 
-    // Loop through the data and create the HTML for each row
+
     teamsData.forEach((team, index) => {
         const row = document.createElement('div');
         row.classList.add('team-row');
 
-        // This adds a slight delay to each row so they animate one after the other
+
         row.style.animationDelay = `${index * 0.1}s`;
 
         row.innerHTML = `

@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Team Data - Update this with your actual teams!
-    // I used 'ui-avatars' to automatically generate cool placeholder logos based on team names.
+
     const teamsData = [
         {
             name: "Wild Style",
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDescription = document.getElementById('modal-description');
     const modalRoster = document.getElementById('modal-roster');
 
-    // 1. Generate the Team Rows
+
     teamsData.forEach((team, index) => {
         const row = document.createElement('div');
         row.classList.add('team-list-row');
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="team-drivers-count">${team.members.length} Drivers</div>
         `;
 
-        // 2. Add Click Event to open Modal
+
         row.addEventListener('click', () => {
             openModal(team);
         });
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         board.appendChild(row);
     });
 
-    // 3. Function to populate and open the modal
+
     function openModal(team) {
         modalLogo.src = team.logo;
         modalTeamName.textContent = team.name;
@@ -106,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalDriversCount.textContent = team.members.length;
         modalDescription.textContent = team.description;
 
-        // Clear previous roster and inject new ones
+
         modalRoster.innerHTML = '';
         team.members.forEach(member => {
             const li = document.createElement('li');
@@ -114,19 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
             modalRoster.appendChild(li);
         });
 
-        // Show the modal
+
         modal.classList.add('active');
     }
 
-    // 4. Close modal logic
+
     function closeModal() {
         modal.classList.remove('active');
     }
 
-    // Close when clicking the 'X'
+
     closeBtn.addEventListener('click', closeModal);
 
-    // Close when clicking outside the modal box
+
     window.addEventListener('click', (event) => {
         if (event.target === modal) {
             closeModal();
