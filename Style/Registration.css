@@ -1,0 +1,82 @@
+/* =========================================
+   REGISTRATION FORM STYLES
+   ========================================= */
+.registration-wrapper {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.form-container {
+    background: linear-gradient(145deg, #0f1738, #0a0f25);
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align: left; /* Keep form labels left-aligned for readability */
+}
+
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #eab308; /* Gold labels */
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.helper-text {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+/* Inputs and Textareas */
+.input-group input[type="text"],
+.input-group textarea {
+    background-color: rgba(4, 9, 26, 0.6);
+    border: 2px solid #1e293b;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #7c3aed; /* Purple glow on focus */
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+/* Custom File Upload Styling */
+.input-group input[type="file"] {
+    background-color: rgba(4, 9, 26, 0.6);
+    border: 2px dashed #3b82f6;
+    border-radius: 10px;
+    padding: 15px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-group input[type="file"]:hover {
+    border-color: #7c3aed;
+    background-color: rgba(124, 58, 237, 0.1);
+}
+
+/* Submit Button adjustment */
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}

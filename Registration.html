@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCMLeague - Registration</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/Registration.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">TCMLeague</div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Standing.html">Standing</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Teams.html">Teams</a></li>
+        <li><a href="Discord.html">Discord</a></li>
+        <li><a href="Registration.html" class="nav-join-btn">JOIN NOW</a></li>
+    </ul>
+</nav>
+
+<section class="registration-wrapper fade-in">
+    <div class="discord-header">
+        <h2 class="grand-race">SECURE YOUR SPOT</h2>
+        <h1 class="standings-main-title">TEAM REGISTRATION</h1>
+        <p class="discord-subtitle">Fill out the form below to register your team for the upcoming season. Make sure to follow the required format for your roster!</p>
+    </div>
+
+    <div class="form-container">
+        <form id="leagueForm" action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="dff4a906-58ff-4230-9a50-8b1ebea9eae9">
+            <input type="hidden" name="subject" value="New TCMLeague Team Registration!">
+
+            <div class="input-group">
+                <label for="teamName">Team Name</label>
+                <input type="text" id="teamName" name="team_name"  required>
+            </div>
+
+            <div class="input-group">
+                <label for="teamColor">Team Color (Name or Hex)</label>
+                <input type="text" id="teamColor" name="team_color" placeholder="e.g., Yellow or #FFFF00" required>
+            </div>
+
+            <div class="input-group">
+                <label for="teamDesc">Brief Description</label>
+                <p class="helper-text">Tell us a bit about your team's history, racing style, or motto! (Max 200 characters)</p>
+                <textarea id="teamDesc" name="team_description" rows="3" maxlength="200"  required></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="roster">Roster Details (Discord Tag & Ubi/Console ID)</label>
+                <p class="helper-text">Format: @DiscordTag | Ubi: Name / PSN: Name</p>
+                <textarea id="roster" name="roster_details" rows="6"  required></textarea>
+            </div>
+
+            <div style="background-color: rgba(124, 58, 237, 0.15); border: 2px dashed #7c3aed; border-radius: 10px; padding: 15px; text-align: center; margin-bottom: 25px;">
+                <p style="color: #e2e8f0; font-size: 15px; margin: 0; line-height: 1.5;">
+                    <strong style="color: #eab308; text-transform: uppercase;">⚠️ Important:</strong><br>
+                    Please email your team logo to <a href="mailto:tcmleagueofficial@gmail.com" style="color: #3b82f6; font-weight: bold; text-decoration: none;">tcmleagueofficial@gmail.com</a> (include your Team Name in the subject), or join our <a href="https://discord.gg/rQgyNnbPCV" target="_blank" style="color: #5865F2; font-weight: bold; text-decoration: none;">Discord</a> to submit it directly to a staff member!
+                </p>
+            </div>
+
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit" class="btn mega-discord-btn submit-btn">
+                <span class="btn-text">SUBMIT REGISTRATION</span>
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="discord-section fade-in" style="margin-top: 40px; border-top: 1px solid #152259; padding-top: 60px;">
+    <h2>Join the Conversation</h2>
+    <p>Hop into our Discord server to chat with drivers, get live updates, and prepare for the next race.</p>
+    <a href="https://discord.gg/rQgyNnbPCV" class="btn discord-btn" target="_blank">Join Our Discord</a>
+</section>
+
+<script src="script.js"></script>
+<script src="Registration.js"></script>
+</body>
+</html>

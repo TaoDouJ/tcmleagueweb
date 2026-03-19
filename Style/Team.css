@@ -1,0 +1,210 @@
+/* =========================================
+   TEAMS PAGE & MODAL STYLES
+   ========================================= */
+.teams-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.teams-titles {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.teams-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Team Row */
+.team-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0f1738, #152259);
+    padding: 15px 25px;
+    border-radius: 50px; /* Pill shape */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+
+    /* Animation setup */
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 0.5s forwards ease-out;
+}
+
+.team-list-row:hover {
+    border-color: #3b82f6; /* Cyan border on hover */
+    transform: scale(1.02) translateX(0); /* Slight pop out */
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.team-row-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eab308; /* Gold border */
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+}
+
+.team-name-text {
+    font-size: 22px;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-leader-text {
+    font-size: 14px;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.team-drivers-count {
+    background-color: #7c3aed; /* Purple */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
+}
+
+/* Modal (Popup) Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 9, 26, 0.85); /* Dark semi-transparent background */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Class added by JS to show the modal */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #0f1738;
+    border: 3px solid #7c3aed;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px 30px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
+
+    /* Bouncy pop-in animation */
+    transform: scale(0.7);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1); /* Pops to full size */
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ea580c; /* Orange */
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-logo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3b82f6;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.modal-stats {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-desc {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.roster-title {
+    color: #eab308;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.roster-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.roster-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    border-left: 3px solid #ea580c;
+}
+/* This makes the teams actually appear! */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

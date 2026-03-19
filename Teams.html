@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCMLeague - Teams</title>
+        <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/Team.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">TCMLeague</div>
+    <ul class="nav-links">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Standing.html">Standing</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Teams.html">Teams</a></li>
+        <li><a href="Discord.html">Discord</a></li>
+        <li><a href="Registration.html" class="nav-join-btn">JOIN NOW</a></li>
+    </ul>
+</nav>
+
+<section class="teams-wrapper">
+    <div class="teams-titles">
+        <h2 class="grand-race">THE CONTENDERS</h2>
+        <h1 class="standings-main-title">OFFICIAL TEAMS</h1>
+    </div>
+
+    <div class="teams-container" id="teams-board"></div>
+</section>
+
+<div id="team-modal" class="modal-overlay">
+    <div class="modal-content">
+        <button id="close-modal" class="close-btn">&times;</button>
+        <div class="modal-header">
+            <img id="modal-logo" src="" alt="Team Logo" class="modal-logo-img">
+            <h2 id="modal-team-name">Team Name</h2>
+        </div>
+        <div class="modal-stats">
+            <span class="detail-pill pill-format">Leader: <strong id="modal-leader">Name</strong></span>
+            <span class="detail-pill pill-time">Drivers: <strong id="modal-drivers-count">0</strong></span>
+        </div>
+        <p id="modal-description" class="modal-desc">Team description goes here.</p>
+
+        <h3 class="roster-title">Current Roster</h3>
+        <ul id="modal-roster" class="roster-list">
+        </ul>
+    </div>
+</div>
+
+<script src="Teams.js"></script>
+</body>
+</html>
