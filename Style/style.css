@@ -197,3 +197,66 @@ h2 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* =========================================
+   GLOBAL MOBILE RESPONSIVENESS (All Pages)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* 1. Stack the Navigation Bar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* 2. Scale down giant Typography */
+    .hero h1, .standings-main-title, .error-title {
+        font-size: 40px !important;
+        line-height: 1.1;
+    }
+
+    h2 { font-size: 28px; }
+    p { font-size: 16px; }
+
+    /* 3. Adjust Padding and Margins for smaller screens */
+    section, .form-container, .discord-promo-wrapper {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    /* 4. Fix Grids (Discord Cards, Teams, etc.) */
+    .discord-features, .team-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stacks everything into one column */
+        gap: 20px;
+    }
+
+    /* 5. Make Tables Scrollable (Crucial for Standings & Schedule) */
+    /* This prevents wide tables from breaking the mobile screen layout */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; /* Keeps table data on one line so you can swipe left/right */
+        -webkit-overflow-scrolling: touch; /* Smooth swiping on iPhones */
+    }
+
+    /* 6. Full-Width Buttons */
+    .btn {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}

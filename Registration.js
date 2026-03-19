@@ -9,15 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const formData = new FormData(form);
 
-        // Visual feedback
         const originalText = btnText.textContent;
         btnText.textContent = "SENDING...";
         submitBtn.disabled = true;
         submitBtn.style.opacity = "0.7";
 
         try {
-            // Send the data securely to Netlify's built-in form handler
-            const response = await fetch("/", {
+            const response = await fetch(window.location.pathname, {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString()
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert("Success! Your team registration has been sent to the stewards. Don't forget to send us your logo!");
                 form.reset();
             } else {
-                alert("Error: Something went wrong submitting the form.");
+                alert("Error: Netlify received the data but rejected it. Check your Netlify Forms dashboard.");
             }
 
         } catch (error) {

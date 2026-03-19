@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Off Track | TCMLeague</title>
+    <link rel="icon" type="image/png" href="Asseste/tcmlogo.png">
+    <link rel="stylesheet" href="Style/style.css">
+    <style>
+        /* Custom styles just for the massive 404 text */
+        .error-wrapper {
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .error-title {
+            font-size: 150px;
+            line-height: 1;
+            margin: 10px 0;
+            color: #ffffff;
+            text-shadow: 0 10px 40px rgba(109, 40, 217, 0.9);
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">TCMLeague</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="standing.html">Standing</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="discord.html">Discord</a></li>
+        <li><a href="registration.html" class="nav-join-btn">JOIN NOW</a></li>
+    </ul>
+</nav>
+
+<section class="error-wrapper fade-in">
+    <div class="discord-header">
+        <h2 class="grand-race">PENALTY APPLIED</h2>
+        <h1 class="error-title">404</h1>
+
+        <p class="discord-subtitle" style="font-size: 20px; max-width: 600px; margin: 20px auto;">
+            <strong>Whoops! Looks like you missed a checkpoint.</strong><br>
+            The URL you typed is incorrect, the page was deleted, or the server hit a speedbump.
+        </p>
+
+        <a href="index.html" class="btn mega-discord-btn" style="margin-top: 30px;">
+            <span class="btn-text">BACK TO THE PADDOCK</span>
+        </a>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
