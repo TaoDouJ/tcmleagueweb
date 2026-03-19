@@ -9,12 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "WOLVES TEAM", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
         { name: "KYOKOSHA RACING", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
         { name: "E6-Racing-Team", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM VODKAA", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM 9", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM 10", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM 11", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM 12", pts: 0, w: 0, d: 0, l: 0, bpts: 0 },
-        { name: "TEAM 13", pts: 0, w: 0, d: 0, l: 0, bpts: 0 }
+        { name: "TEAM VODKAA", pts: 0, w: 0, d: 0, l: 0, bpts: 0 }
+
     ];
 
     const board = document.getElementById('standings-board');
