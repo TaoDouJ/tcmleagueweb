@@ -2,7 +2,8 @@
 .registration-wrapper {
     max-width: 800px;
     margin: 60px auto;
-    padding: 0 20px;
+    padding:0 20px;
+
 }
 
 .form-container {
@@ -12,6 +13,7 @@
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     text-align: left;
+
 }
 
 .input-group {
@@ -27,6 +29,10 @@
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+}
+.discord-header{
+    padding: 30px;
 }
 
 .helper-text {
@@ -34,6 +40,7 @@
     font-size: 13px;
     margin-bottom: 8px;
     font-style: italic;
+
 }
 
 
