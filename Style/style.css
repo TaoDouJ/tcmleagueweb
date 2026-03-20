@@ -253,6 +253,85 @@ h2 {
         text-align: center;
     }
 }
+footer {
+    background-color: #0f1738;
+    border-top: 3px solid #7c3aed;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-links, .footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a, .footer-social a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #eab308;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 12px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #7c3aed;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #6d28d9;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.9);
+}
 
 @media screen and (max-width: 768px) {
 
@@ -365,5 +444,17 @@ h2 {
     .detail-pill {
         font-size: 11px;
         padding: 5px 10px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
     }
 }x²

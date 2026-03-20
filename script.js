@@ -30,4 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
+
+    const bttButton = document.getElementById("backToTop");
+
+    if (bttButton) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                bttButton.classList.add("show");
+            } else {
+                bttButton.classList.remove("show");
+            }
+        });
+
+        bttButton.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
 });
